@@ -22,7 +22,7 @@ def registration(request):
         if password == c_password:
 
             # for create user in User table from reg html form
-            userr = User.objects.create_user(username=username, password=password)
+            user = User.objects.create_user(username=username, password=password)
             user.set_password(password)
             user.save()
 
