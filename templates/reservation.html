@@ -2,13 +2,13 @@
 
 {% block body_block %}
 {% load static %} 		
-                
+                {% block s %}{% endblock s %}
                 <!-- Reservation Section -->
-                <section id="gtco-reservation" class="bg-fixed bg-white section-padding overlay" style="background-image: url({% static 'img/reservation-bg.jpg' %});">
+                <section id="gtco-reservation" class="bg-fixed bg-white p-4 mt-4 overlay" style="background-image: url({% static 'img/reservation-bg.jpg' %}); background-size: cover; height: auto;">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-5">
-                                <div class="section-content bg-white p-5 shadow">
+                            <div class="col-lg-5" >
+                                <div class="section-content bg-white p-5 shadow" id="form">
                                     <div class="heading-section text-center">
                                         <span class="subheading">
                                             Reservation

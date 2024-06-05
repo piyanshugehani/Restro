@@ -1,18 +1,20 @@
 .nav-btn{
-    background-color: #00723d;
+    border-color: rgb(255, 98, 0);
+    color: rgb(255, 98, 0);
 }
 
 .nav-btn:hover{
     color: #fff;
-    background: #005a30;
+    background: rgb(255, 81, 0);
 }
 
 .nav-loginBtn{
-    background-color: #009eb3;
+    color: rgb(255, 98, 0);
+    border-color: rgb(255, 98, 0);
 }
 
 
 .nav-loginBtn:hover{
     color: #fff;
-    background-color: #0a58ca;
+    background-color: rgb(255, 81, 0);
 }

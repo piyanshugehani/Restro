@@ -28,7 +28,7 @@
 			{% endif %}
 			<form action="{% url 'registration' %}" method="POST" name="RegForm">
 				{% csrf_token %}
-				<div class="row">
+				<div class="row" style="background-color:#ffffff85; border-radius:2em; padding:40px; padding-top:50px;">
 					<!-- First Name -->
 					<div class="input-group col-lg-6 mb-4">
 						<div class="input-group-prepend">
@@ -108,7 +108,7 @@
 
 					<!-- Submit Button -->
 					<div class="form-group col-lg-12 mx-auto mb-0">
-						<button type="submit" name="submit" class="btn btn-success btn-block py-2">Create your
+						<button type="submit" name="submit" class="btn button btn-block py-2">Create your
 							account</button>
 					</div>
 
@@ -133,8 +133,8 @@
 
 					<!-- Already Registered -->
 					<div class="text-center w-100">
-						<p class="text-muted font-weight-bold">Already Registered? <a href="#"
-								class="text-primary ml-2">Login</a></p>
+						<p class="text-white font-weight-bold">Already Registered? <a href="{% url "login" %}"
+								class="ml-2" style="color:orangered;">Login</a></p>
 					</div>
 
 				</div>

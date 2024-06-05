@@ -31,6 +31,14 @@
         <!-- Modernizr JS for IE8 support of HTML5 elements and media queries -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
 
+        <style>
+            #logo{
+                height: 100px;
+                width: 220px;
+                padding: 0.2em;
+            }
+        </style>
+
     </head>
     <body data-spy="scroll" data-target="#navbar">
         <div id="side-nav" class="sidenav">
@@ -61,10 +69,10 @@
             </div>     
         </div>	
 
-        <div id="canvas-overlay"></div>
+        <div id="canvas-overlay bg-black"></div>
             <div class="boxed-page">
                 <nav id="navbar-header" class="navbar navbar-expand-lg">
-                    <div class="container">
+                    <div class="container boxx">
                         <a class="navbar-brand navbar-brand-center d-flex align-items-center p-0 only-mobile" href="/">
                             <img src="{% static 'img/logo.png' %}" alt="">
                         </a>
@@ -72,14 +80,14 @@
                             <span class="lnr lnr-menu"></span>
                         </button>
 
-                        <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+                        <div class="collapse navbar-collapse bg-black justify-content-between" id="navbarSupportedContent">
                             <ul class="navbar-nav d-flex justify-content-between">
                                 <li class="nav-item only-desktop">
                                     <a class="nav-link" id="side-nav-open" href="#">
                                         <span class="lnr lnr-menu"></span>
                                     </a>
                                 </li>
-                                <div class="d-flex flex-lg-row flex-column">
+                                <div class="d-flex flex-lg-row flex-column fs-6">
                                     <li class="nav-item active">
                                         <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                                     </li>
@@ -100,10 +108,10 @@
                             </ul>
                             
                             <a class="navbar-brand navbar-brand-center d-flex align-items-center only-desktop" href="/">
-                                <img src="{% static 'img/logo.png' %}" alt="">
+                                <img src="{% static 'img/logo.png' %}" alt="" id="logo">
                             </a>
                             <ul class="navbar-nav d-flex justify-content-between">
-                                <div class="d-flex flex-lg-row flex-column">
+                                <div class="d-flex flex-lg-row flex-column align-items-center">
                                     <li class="nav-item active">
                                        <a class="nav-link" href="{% url 'menu' %}">Menu</a>
                                     </li>
@@ -126,19 +134,14 @@
                                         </li>
                                     {% else %}                                        
                                         <li class="nav-item">
-                                            <a class="nav-link" href="{% url 'login' %}"><button type="button" class="btn nav-loginBtn btn-success">Login</button></a>
+                                            <a class="nav-link" href="{% url 'login' %}"><button type="button" class="btn nav-loginBtn">Login</button></a>
                                         </li>
     
                                         <li class="nav-item">
-                                            <a class="nav-link" href="{% url 'registration' %}"><button type="button" class="btn nav-btn btn-success">Registration</button></a>
+                                            <a class="nav-link" href="{% url 'registration' %}"><button type="button" class="btn nav-btn">Registration</button></a>
                                         </li>
                                     {% endif %}
                                 </div>
-                                <li class="nav-item">
-                                    <a id="side-search-open" class="nav-link" href="#">
-                                        <span class="lnr lnr-magnifier"></span>
-                                    </a>
-                                </li>
                             </ul>
                         </div>
                     </div>
@@ -149,7 +152,7 @@
                 {% endblock %}
 
             <!-- footer Section -->
-            <footer class="mastfoot pb-4 pt-5 bg-white section-padding pb-0">
+            <footer class="mastfoot pb-4 mb-6 bg-black section-padding">
                 <div class="inner container">
                     <div class="row">
                         <div class="col-lg-4">
