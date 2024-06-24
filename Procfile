@@ -1,1 +1,0 @@
-web: gunicorn pipproject.wsgi
